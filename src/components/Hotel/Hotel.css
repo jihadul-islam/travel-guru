@@ -1,0 +1,9 @@
+.half-width{
+    width: 40%;
+    color:black;
+   margin: 25px;
+}
+
+.half-width img{
+    width: 540px;
+}
