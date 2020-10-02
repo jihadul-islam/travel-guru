@@ -259,7 +259,7 @@ class GoogleMaps extends React.Component {
 
         return (
             <div style={{ padding: '1rem', margin: '0 auto', maxWidth: 1000 }}>
-                <h1>Google Map Basic</h1>
+               
                 <Descriptions bordered>
                     <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
                     <Descriptions.Item label="Area">{this.state.area}</Descriptions.Item>
@@ -268,7 +268,7 @@ class GoogleMaps extends React.Component {
                 </Descriptions>
 
                 <AsyncMap
-                    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyALVjLwOIM1gf7EzdJJVmWLKdLP-yZGTcw&libraries=places"
+                    googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz_zh-yyc7WBUrtqDznm5uFyesNw5SyL4&libraries=places"
                     loadingElement={
                         <div style={{ height: `100%` }} />
                     }

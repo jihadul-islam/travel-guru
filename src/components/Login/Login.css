@@ -2,6 +2,8 @@
     text-align: center;
     border: 1px solid black;
     margin: 100px 500px;
+   
+     
 }
 
 .login input{
@@ -26,8 +28,8 @@
 
 }
 .login-gf{
-    background-color: rgb(245, 90, 0);
-    border-radius: 20px;
+    background-color:#F9A51A;
+   
     text-align: center;
     text-decoration: none;
     background-origin: padding-box;

@@ -1,3 +1,5 @@
+import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Button, Card, CardDeck } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
@@ -9,8 +11,8 @@ const Places = ({home}) => {
   }
   return (
    <div>
-<CardDeck>
-  <Card className="cards">
+<CardDeck className="cards">
+  
     
     <Card.Body>
       <Card.Title>{home.title}</Card.Title>
@@ -19,9 +21,10 @@ const Places = ({home}) => {
       </Card.Text>
     </Card.Body>
     <Card.Img variant="top" src={home.imgUrl} />
-  </Card>
+ 
   </CardDeck>
-  <Button onClick={() => handleBook(home.bedType)} >Booking--></Button>
+  
+  <Button className="booking-btn" onClick={() => handleBook(home.bedType)} ><FontAwesomeIcon icon={faAddressBook} /> Booking--></Button>
     </div>
   );
 };

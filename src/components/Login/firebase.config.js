@@ -1,11 +1,13 @@
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyBWuelIQpvF1YUjs1vs8P8y8mPdlhAYQ1M",
-    authDomain: "travel-guru-de03d.firebaseapp.com",
-    databaseURL: "https://travel-guru-de03d.firebaseio.com",
-    projectId: "travel-guru-de03d",
-    storageBucket: "travel-guru-de03d.appspot.com",
-    messagingSenderId: "784967365391",
-    appId: "1:784967365391:web:b994ea5147655fdd83447a"
+    apiKey: "AIzaSyCFjbXcw_hdEIvnOUd5NaTwEFqxFyT2lGI",
+    authDomain: "ema-john-simple-641aa.firebaseapp.com",
+    databaseURL: "https://ema-john-simple-641aa.firebaseio.com",
+    projectId: "ema-john-simple-641aa",
+    storageBucket: "ema-john-simple-641aa.appspot.com",
+    messagingSenderId: "939858705049",
+    appId: "1:939858705049:web:6d9bae8641dcdec257d608",
+    measurementId: "G-KQ9RN6V1VY"
   };
 
   export default firebaseConfig;

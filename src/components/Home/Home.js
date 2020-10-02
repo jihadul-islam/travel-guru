@@ -1,5 +1,5 @@
 import React from 'react';
-import Book from '../Book/Book';
+
 import Places from '../Places/Places';
 
 const Home = () => {
@@ -63,9 +63,7 @@ const Home = () => {
                 rooms.map(home => <Places key={home.bedType} home={home}></Places>)
             }
 
-            {
-              hotel.map(room => <Book key={room.hotelType} room={room}></Book>)
-            }
+            
         </div>
     );
 };

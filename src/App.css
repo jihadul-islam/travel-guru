@@ -1,10 +1,8 @@
-.header{
-  border: 4px solid black;
-  height: 300px;
-  background-position: center center;
-  background-size: 100% 100%;
-};
-.main-bg{
- 
-  background-color: rebeccapurple;
+
+.bg-img{
+  background-image: url(./image/bg4.jpg);
+  background-repeat: no-repeat;
+ width:100%;
+ background-size: 100%;
+
 }
