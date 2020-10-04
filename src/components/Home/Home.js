@@ -1,14 +1,12 @@
 import React from 'react';
-
 import Places from '../Places/Places';
-
 const Home = () => {
     const style = {
         display: 'flex',
         margin: '40px',
         justifyContent: 'space-between'
     }
-    const rooms = [
+    const places = [
         {
             title: ' Coxsbazar',
             description: 'Coxs Bazar is a city,fishing port,tourism centre and district headquarters in.',
@@ -41,29 +39,14 @@ const Home = () => {
             avatar: 'F',
             price: 199
         }
-    ]
+    ];
 
-    const hotel  = [
-
-      {
-        title: 'Sundorbon',
-        description: ' Have lots of in-room facilities and are designed in open-concept living area.',
-        imgUrl: 'https://i.ibb.co/BLw2CJN/sundorbon.png" ',
-        bed: 2,
-        capacity: 4,
-        bedType: 'Family',
-        avatar: 'F',
-        price: 199
-    }
-      
-    ]
+   
     return (
         <div style={style}>
             {
-                rooms.map(home => <Places key={home.bedType} home={home}></Places>)
+                places.map(place => <Places key={place.placeType} place={place}></Places>)
             }
-
-            
         </div>
     );
 };

@@ -1,10 +1,10 @@
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Button, Card, CardDeck } from 'react-bootstrap';
+import {  Card, CardDeck } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import './Places.css'
-const Places = ({home}) => {
+const Places = ({place}) => {
   const history = useHistory()
   const handleBook = (bedType) => {
       history.push(`/book/${bedType}`);
@@ -12,19 +12,16 @@ const Places = ({home}) => {
   return (
    <div>
 <CardDeck className="cards">
-  
-    
-    <Card.Body>
-      <Card.Title>{home.title}</Card.Title>
+    <Card.Body  style={{backgroundColor:' rgba(255, 255, 255, 0.2)',borderRadius:'5px'}}>
+      <Card.Title>{place.title}</Card.Title>
       <Card.Text>
-       {home.description}
+            {place.description}
       </Card.Text>
     </Card.Body>
-    <Card.Img variant="top" src={home.imgUrl} />
- 
+    <Card.Img variant="top" src={place.imgUrl} />
   </CardDeck>
   
-  <Button className="booking-btn" onClick={() => handleBook(home.bedType)} ><FontAwesomeIcon icon={faAddressBook} /> Booking--></Button>
+  <button className="booking-btn" onClick={() => handleBook(place.placeType)} ><FontAwesomeIcon icon={faAddressBook} /> Booking--> </button>
     </div>
   );
 };
