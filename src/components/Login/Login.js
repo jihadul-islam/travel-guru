@@ -1,5 +1,5 @@
 
-import React, { isValidElement, useContext, useState } from 'react';
+import React, {  useContext, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
 import { handleGoogleSignIn, handleFbSignIn, handleSignOut, initializedLogInFramework, createUserWithEmailAndPassword, signInWithEmailAndPassword } from './loginManager';

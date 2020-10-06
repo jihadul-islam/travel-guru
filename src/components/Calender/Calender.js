@@ -6,7 +6,7 @@ class Calender extends React.Component {
   }
   render(){
     return (
-      <div style={{marginLeft:'25px'}}>
+      <div style={{margin:'25px'}}>
        <img src={CalImg} alt=""/> {this.state.curTime}
       </div>
     );
