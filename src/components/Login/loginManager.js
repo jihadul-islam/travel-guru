@@ -12,10 +12,10 @@ export const handleGoogleSignIn = () => {
         const googleProvider = new firebase.auth.GoogleAuthProvider();
             return firebase.auth().signInWithPopup(googleProvider)
             .then(result => {
-                const {displayName, email, photoURL} = result.user;
+                const {ShowName, email, photoURL} = result.user;
                 const signInUser ={
                     isSignIn: true,
-                    fullName: displayName,
+                    name: ShowName,
                     email: email,
                     photoURL: photoURL,
                     success: true,
@@ -36,10 +36,10 @@ export const handleFbSignIn = ()=> {
     const fbProvider = new firebase.auth.FacebookAuthProvider();
      return  firebase.auth().signInWithPopup(fbProvider)
         .then(res => {
-            const {displayName, email, photoURL} = res.user;
+            const {ShowName, email, photoURL} = res.user;
             const signInUser ={
                 isSignIn: true,
-                fullName: displayName,
+                name: ShowName,
                 email: email,
                 photoURL: photoURL,
                 success: true,
@@ -67,15 +67,15 @@ export const handleSignOut = () => {
         })
     }
 
-export const createUserWithEmailAndPassword = (fullName, email, password) => {
+export const createUserWithEmailAndPassword = (name, email, password) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(res => {
         const newUserInfo = res.user;
         newUserInfo.error = '';
         newUserInfo.isSignIn = true;
         newUserInfo.success = true;
-        newUserInfo.fullName = fullName;
-        updateUser(fullName, res.photoURL);
+        newUserInfo.name = name;
+        updateUser(name, res.photoURL);
         return newUserInfo;
     })
     .catch(error => {
@@ -92,7 +92,7 @@ export const signInWithEmailAndPassword = (email, password) => {
     return firebase.auth().signInWithEmailAndPassword(email, password)
             .then(res => {
                 const newUserInfo = res.user;
-                newUserInfo.fullName = res.user.displayName;
+                newUserInfo.name = res.user.ShowName;
                 newUserInfo.password = '';
                 newUserInfo.error = '';
                 newUserInfo.success = true;
@@ -110,10 +110,10 @@ export const signInWithEmailAndPassword = (email, password) => {
             });
     }
 
-export const updateUser = (fullName, photoURL) => {
+export const updateUser = (name, photoURL) => {
             var user = firebase.auth().currentUser;
             user.updateProfile({
-            displayName: fullName,
+            ShowName: name,
             photoURL: photoURL,
             }).then(res => {
             }).catch(error =>  console.log(error.message));

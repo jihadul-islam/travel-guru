@@ -11,9 +11,7 @@ const Login = () => {
     const [newUser, setNewUser] = useState(false);
     const [user, setUser] = useState({
         isSignIn:false,
-        firstName:'',
-        lastName:'',
-        fullName:'',
+        name:'',
         email:'',
         password:'',
         loginPassword:'',
@@ -123,11 +121,11 @@ const Login = () => {
      </div>
                 <p style={{textAlign:'center'}}><b>or</b></p>
                <div onClick={googleSignIn} className='googleFbLoginBtn'>
-                    <img src={gIcon} alt="sign in with google"/>
+                    <img src={gIcon} alt=""/>
                     <button onClick={googleSignIn}>Continue with Google</button>
                 </div>
                 <div onClick={fbSignIn} className='googleFbLoginBtn'>
-                    <img src={fbIcon} alt="sign in with fb"/>
+                    <img src={fbIcon} alt=""/>
                     <button onClick={fbSignIn}>Continue with Facebook</button><br/>
                 </div>
         </div>

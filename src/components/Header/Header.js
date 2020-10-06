@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../App';
 import logo from '../../Logo.png';
 import './Header.css';
 
-// const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
 const Header = () => {
+    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
     return (
      
       <div>
@@ -18,12 +21,18 @@ const Header = () => {
           </li>
          
           <li>
-              <Link className="btn-book" to="/book">Book</Link>
+              <Link variant="outline-info" className="btn-book" to="/book">Book</Link>
           </li>
 
-          <li>
-              <Link to="/login">Login</Link>
+          <li className="singin-btn" >
+           {
+               loggedInUser.isSignIn ? 
+               <Link onClick={() => setLoggedInUser({})} >Sign Out </Link>:
+               <Link to='/login'>Sign In</Link>
+             }
+            
           </li>
+          
       </ul>
   </nav>
   </div>
