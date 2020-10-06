@@ -34,15 +34,16 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
+          <PrivateRoute path="/book">
+            <Book/>
+          </PrivateRoute>
           <Route path="/login">
             <Login />
           </Route>
           {/* <Route path="/book">
             <Book></Book>
           </Route> */}
-          <PrivateRoute path="/book">
-            <Book/>
-          </PrivateRoute>
+         
           <Route exact path="/">
             <Home />
           </Route>

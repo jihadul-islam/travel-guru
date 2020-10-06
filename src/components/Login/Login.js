@@ -1,6 +1,4 @@
 
-
-
 import React, { isValidElement, useContext, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
@@ -96,7 +94,7 @@ const Login = () => {
     const handleResponse = (res, redirect) =>{
         setUser(res);
         if(res.error){
-        document.write(res.error);  
+            alert(res.error);  
         }
         setLoggedInUser(res);
        if(redirect){
